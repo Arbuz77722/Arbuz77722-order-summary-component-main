@@ -1,0 +1,149 @@
+:root {
+  /* Colors */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+
+  /* Typography */
+  --font-family: "Red Hat Display", sans-serif;
+  --font-size-paragraph: 16px;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  font-size: var(--font-size-paragraph);
+  font-family: var(--font-family);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-image: url("images/pattern-background-desktop.svg");
+  background-size: cover;
+}
+
+.order-card {
+  max-width: 35rem;
+  background-color: #fff;
+  border-radius: 11px;
+  overflow: hidden;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 4rem;
+}
+
+.summary-header h1 {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-black);
+}
+
+.summary-content {
+  color: var(--desaturated-blue);
+  text-align: center;
+  font-weight: var(--font-weight-medium);
+}
+
+.plans {
+  background-color: var(--very-pale-blue);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 11px;
+  padding: 2rem;
+}
+.plan-details {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.plan-info h5 {
+  font-weight: var(--font-weight-black);
+}
+
+.plan-info p {
+  font-size: 1.5rem;
+  color: var(--desaturated-blue);
+}
+
+.change-link:link,
+.change-link:visited {
+  display: inline-block;
+  margin-left: 10rem;
+  font-size: 1.2rem;
+  color: var(--bright-blue);
+  font-weight: var(--font-weight-black);
+}
+.change-link:hover,
+.change-link:active {
+  text-decoration: none;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.button {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  padding: 1.5rem 6rem;
+  border-radius: 11px;
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+}
+
+.btn-to-proceed {
+  background-color: var(--bright-blue);
+  color: var(--very-pale-blue);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.104);
+}
+.btn-to-cancel {
+  background-color: transparent;
+  color: var(--desaturated-blue);
+  font-weight: var(--font-weight-bold);
+}

@@ -1,0 +1,9 @@
+@media (max-width: 24em) {
+  body {
+    background: url("images/pattern-background-mobile.svg") no-repeat
+      center/cover;
+  }
+  .order-card {
+    max-width: 33rem;
+  }
+}
